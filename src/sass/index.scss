@@ -1,2 +1,26 @@
+@import './utils/vars';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
 @import './common';
-@import './example';
+@import './base/reset';
+
+@import './components/container';
+@import './components/buttons';
+
+@import './layouts/header_hero';
+@import './layouts/products';
+@import './layouts/about';
+@import './layouts/advantages';
+@import './layouts/gallery';
+@import './layouts/customer_reviews';
+@import './layouts/contacts';
+@import './layouts/footer';
+
+@import './layouts/header_hero-modal';
+@import './layouts/product-modal';
+@import './layouts/about_modal';
+@import './layouts/contacts-modal-1';
+@import './layouts/contacts-modal-2';
+
+// @import './example';
