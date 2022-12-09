@@ -1,0 +1,179 @@
+<header class="header">
+  <div class="container header__container" id="home">
+    <a href="" class="logo">
+      <svg class="logo__icon">
+        <use href="./images/icons.svg#logo-hero"></use>
+      </svg>
+    </a>
+    <nav class="header__nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#home" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">How it’s made?</a>
+        </li>
+        <li class="nav__item">
+          <a href="#products" class="nav__link">Our products</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__buttons">
+      <button
+        type="button"
+        aria-label="Mobile menu open"
+        class="mobile-menu__btn"
+        data-menu-open
+      >
+        <svg class="mobile-menu__icon">
+          <use href="./images/icons.svg#menu-burger"></use>
+        </svg>
+      </button>
+      <button
+        type="button"
+        aria-controls="header-modal-window"
+        class="header__btn header__btn--desk"
+        data-header-modal-open
+      >
+        Buy now
+        <svg class="header__icon">
+          <use href="./images/icons.svg#arrow-small"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="overlay is-hidden" data-menu>
+    <div class="mobile-menu">
+      <div class="container mobile-menu__container">
+        <div class="mobile-menu__wrap">
+          <a href="" class="logo">
+            <svg class="logo__icon">
+              <use href="./images/icons.svg#logo-hero"></use>
+            </svg>
+          </a>
+          <button
+            type="button"
+            aria-label="Mobile menu close"
+            class="mobile-menu__btn"
+            data-menu-close
+          >
+            <svg class="mobile-menu__icon">
+              <use href="./images/icons.svg#close-mobile-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a href="#home" class="mobile-menu__link">Home</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#about" class="mobile-menu__link">How it’s made?</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#products" class="mobile-menu__link">Our products</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#contacts" class="mobile-menu__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          aria-controls="header-modal-window"
+          class="header__btn header__btn--mob"
+          data-header-mobile-modal-open
+        >
+          Buy now
+          <svg class="header__icon">
+            <use href="./images/icons.svg#arrow-small"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<button type="button" aria-label="Go to the top" class="page-up-btn">
+  <svg class="page-up-icon">
+    <use href="./images/icons.svg#up-arrow"></use>
+  </svg>
+</button>
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__wrap">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          ice cream made with <span class="hero__title--large">passion</span>
+        </h1>
+        <div class="hero__buttons">
+          <a href="#products" class="hero__link hero__link--outlined"
+            >Products</a
+          >
+          <a href="#about" class="hero__link hero__link--underlined"
+            >How it’s made?</a
+          >
+        </div>
+      </div>
+      <div class="hero__meta">
+        <p class="hero__tag"><span class="hero__count">16</span> cafes</p>
+        <p class="hero__tag"><span class="hero__count">23</span> food trucks</p>
+      </div>
+    </div>
+    <img
+      srcset="
+        ./images/hero-header/hero-ice-mob.png     176w,
+        ./images/hero-header/hero-ice-mob@2x.png  352w,
+        ./images/hero-header/hero-ice-tab.png     268w,
+        ./images/hero-header/hero-ice-tab@2x.png  536w,
+        ./images/hero-header/hero-ice-desk.png    456w,
+        ./images/hero-header/hero-ice-desk@2x.png 912w
+      "
+      sizes="(min-width: 1200px) 456px, (min-width: 768px) 268px, (min-width: 320px) 176px, 176px"
+      src="./images/hero-header/hero-ice-mob.png"
+      alt="Ice cream with eyes"
+      class="hero__img hero__img--main"
+    />
+    <img
+      srcset="
+        ./images/hero-header/hero-blur-mob.png      288w,
+        ./images/hero-header/hero-blur-mob@2x.png   576w,
+        ./images/hero-header/hero-blur-tab.png      378w,
+        ./images/hero-header/hero-blur-tab@2x.png   756w,
+        ./images/hero-header/hero-blur-desk.png     643w,
+        ./images/hero-header/hero-blur-desk@2x.png 1286w
+      "
+      sizes="(min-width: 1200px) 643px, (min-width: 768px) 378px, (min-width: 320px) 288px, 0px"
+      src="./images/hero-header/hero-blur-mob.png"
+      alt="Blur"
+      class="hero__img hero__img--blur"
+    />
+    <div class="hero__desc">
+      <img
+        srcset="
+          ./images/hero-header/hero-plate-tab.png     152w,
+          ./images/hero-header/hero-plate-tab@2x.png  304w,
+          ./images/hero-header/hero-plate-desk.png    225w,
+          ./images/hero-header/hero-plate-desk@2x.png 450w
+        "
+        sizes="(min-width: 1200px) 225px, (min-width: 768px) 152px, 152px"
+        src="./images/hero-header/hero-plate-tab.png"
+        alt="Ice cream on a plate"
+        class="hero__img hero__img--round"
+      />
+      <div class="hero__caption">
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <a href="#about" aria-label="About">
+          <svg class="hero__icon">
+            <use href="./images/icons.svg#arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,145 @@
+.franchise-backdrop {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+}
+
+.is-franchise-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.franchise-modal {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 100vh;
+  max-width: 568px;
+  max-height: 674px;
+  padding: 28px;
+
+  background: var(--modal-bg-color2);
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: 380px) and (max-width: 480px) {
+    max-height: 620px;
+  }
+
+  @media (min-width: 576px) {
+    max-height: 668px;
+  }
+
+  @media (min-width: 776px) {
+    padding: 32px 60px;
+  }
+}
+.franchise-close-btn {
+  display: block;
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: inherit;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+  margin-left: auto;
+  margin-top: -28px;
+  margin-right: -12px;
+  transform: translateX(16px);
+
+  @media (min-width: 776px) {
+    margin-top: -32px;
+    margin-right: -28px;
+    transform: translateX(28px);
+  }
+}
+.franchise-close-icon {
+  fill: var(--secondary-link-color);
+}
+.franchise-modal-title {
+  font-family: 'Seymour One', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--secondary-link-color);
+  max-width: 95%;
+  margin: auto;
+  margin-top: -12px;
+  margin-bottom: 29px;
+
+  @media (min-width: 480px) {
+    font-size: 20px;
+    margin-top: -8px;
+    margin-bottom: 24px;
+    max-width: 322px;
+  }
+}
+.franchise-modal-about {
+  line-height: 1.4;
+  color: var(--accent-text-color);
+  margin-bottom: 15px;
+  @media (min-width: 480px) {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+.franchise-modal-form {
+}
+.franchise-modal-field {
+  margin-bottom: 12px;
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+  &:last-child {
+    margin-bottom: 24px;
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+}
+.franchise-modal-input,
+.franchise-modal-area {
+  width: 100%;
+  max-width: 368px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--secondary-text-color);
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  padding: 8px 12px;
+  @media (min-width: 768px) {
+    font-size: 14px;
+    padding: 11px 16px;
+  }
+}
+.franchise-modal-label {
+}
+.franchise-modal-area {
+  height: 84px;
+  resize: none;
+}
+
+.franchise-submit-btn {
+  display: inline-block;
+  padding: 12px 34px;
+  font-size: 12px;
+  line-height: 1.25; /* 15/12 */
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.21; /* 17/14 */
+  }
+}

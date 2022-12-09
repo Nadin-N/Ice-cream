@@ -1,0 +1,247 @@
+.bg-ice-wrap {
+  background-image: url('../images/product/ice-back320@1x.jpg');
+  background-size: cover;
+  background-position: top center;
+
+  @include bg-image {
+    background-image: url('../images/product/ice-back320@2x.jpg');
+  }
+
+  @include adaptive(tab-min) {
+    background-image: url('../images/product/ice-back768@1x.jpg');
+
+    @include bg-image {
+      background-image: url('../images/product/ice-back768@2x.jpg');
+    }
+  }
+
+  @include adaptive(desk) {
+    background-image: url('../images/product/ice-back1200@1x.jpg');
+
+    @include bg-image {
+      background-image: url('../images/product/ice-back1200@2x.jpg');
+    }
+  }
+}
+
+.bg-green-wrap {
+  background-image: linear-gradient(
+    transparent 20%,
+    $page-bg-color 20%,
+    $page-bg-color 100%
+  );
+
+  @include adaptive(tab-min) {
+    background-image: linear-gradient(
+      transparent 32%,
+      $page-bg-color 32%,
+      $page-bg-color 100%
+    );
+  }
+
+  @include adaptive(desk) {
+    background-image: linear-gradient(
+      transparent 13%,
+      $page-bg-color 13%,
+      $page-bg-color 100%
+    );
+  }
+}
+
+.contacts__list {
+  margin-bottom: 20px;
+
+  @include adaptive(tab-min) {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  @include adaptive(desk) {
+    gap: 32px;
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__item {
+  padding: 40px 32px 24px;
+  background-color: $modal-bg-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  &:not(:last-child) {
+    @include adaptive(mob-only) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include adaptive(tab-min) {
+    flex-basis: calc((100% - 2 * 16px) / 3);
+    padding: 40px 24px 32px;
+  }
+
+  @include adaptive(desk) {
+    flex-basis: calc((100% - 2 * 32px) / 3);
+    padding: 40px 40px 32px;
+  }
+}
+
+.contacts__worktime {
+  &:first-of-type {
+    margin-bottom: 8px;
+
+    @include adaptive(desk) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &:last-of-type::after {
+    content: '';
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+
+    @include adaptive(tab-min) {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.contacts__text {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: $secondary-text-color;
+
+  @include adaptive(tab-min) {
+    font-size: 14px;
+  }
+
+  @include adaptive(desk) {
+    font-size: 16px;
+  }
+}
+
+.contacts__text--large {
+  display: inline-block;
+  padding: 0 22px;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: $accent-color;
+  border-radius: 4px;
+
+  @include adaptive(tab-min) {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+}
+
+.contacts__text--city {
+  margin-bottom: 8px;
+
+  @include adaptive(tab-only) {
+    margin-bottom: 12px;
+  }
+}
+
+.contacts__text--light {
+  color: #ababab;
+}
+
+.contacts__link {
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  color: $secondary-text-color;
+
+  @include adaptive(tab-min) {
+    font-size: 14px;
+  }
+
+  @include adaptive(desk) {
+    font-size: 16px;
+  }
+}
+
+.contacts__link--location {
+  letter-spacing: 0.04em;
+  color: $hover-link-color;
+
+  &::after {
+    content: '';
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+
+    @include adaptive(tab-min) {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.location-btn,
+.franchise-btn {
+  color: var(--accent-text-color);
+}
+
+.location-btn {
+  width: 196px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+}
+
+.franchise-btn {
+  background: var(--primary-color);
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  width: 196px;
+  height: 42px;
+}
+
+.contacts__icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  fill: currentColor;
+}
+
+.contacts__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
